@@ -7,7 +7,6 @@ var Record = function(artist, title, genre, price){
 
 Record.prototype.printDetails = function () {
   return (this.artist + ": " + this.title + ", Genre:" + this.genre + " Price: £" + this.price);
-  // return "test"
 };
 
 module.exports = Record;
