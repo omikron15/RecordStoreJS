@@ -6,6 +6,8 @@ describe("Store", function(){
 
   let store1;
   let record1;
+  let record2;
+  let record3;
 
   beforeEach(function(){
     store1 = new Store("Store Name", "City 1");
@@ -53,5 +55,14 @@ describe("Store", function(){
     store1.sellRecord(record1);
     assert.strictEqual(store1.financeReport(), "Store Balance: £5.55, Store Inventory Value: £15.55");
   });
+
+  it("Can display all records of a given genre", function(){
+    record3 = new Record("Artist 3", "Title 3", "Pop", 10.00);
+    store1.addRecord(record1);
+    store1.addRecord(record2);
+    store1.addRecord(record3);
+    result = [record1, record2];
+    assert.deepStrictEqual(store1.displayRecordsOfGenre("Rock"), result);
+  })
 
 })

@@ -33,6 +33,17 @@ Store.prototype.financeReport = function () {
   return ("Store Balance: £" + this.balance + ", Store Inventory Value: £" + this.InventoryValue())
 };
 
+Store.prototype.displayRecordsOfGenre = function (genre) {
+  results = [];
+  this.inventory.forEach(function(record){
+    if(record.genre === genre){
+      results.push(record);
+    }
+  })
+  return results;
+
+};
+
 
 
 
