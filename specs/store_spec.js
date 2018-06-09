@@ -21,4 +21,8 @@ describe("Store", function(){
     assert.strictEqual(store1.inventory.length, 0);
   });
 
+  it("has a till balance that starts at 0", function(){
+    assert.strictEqual(store1.balance, 0);
+  });
+
 })
