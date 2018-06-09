@@ -21,6 +21,4 @@ describe("Customer", function(){
     assert.strictEqual(customer1.recordCollection.length, 0);
   });
 
-
-
 })
