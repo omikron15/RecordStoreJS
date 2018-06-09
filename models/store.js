@@ -5,4 +5,8 @@ var Store = function(name, city){
   this.balance  = 0.0;
 }
 
+Store.prototype.addRecord = function (record) {
+  this.inventory.push(record);
+};
+
 module.exports = Store;
