@@ -6,7 +6,7 @@ describe("Record", function(){
   let record1;
 
   beforeEach(function(){
-    record1 = new Record("Artist 1", "Title 1", "Rock", 10.00);
+    record1 = new Record("Artist 1", "Title 1", "Rock", 5.55);
   });
 
   it("has an artist", function(){
@@ -22,7 +22,12 @@ describe("Record", function(){
   });
 
   it("has a price", function(){
-    assert.strictEqual(record1.price, 10.00);
+    assert.strictEqual(record1.price, 5.55);
+  });
+
+  it("can print details", function(){
+    let result = "Artist 1: Title 1, Genre:Rock Price: £5.55"
+    assert.strictEqual(record1.printDetails(), result);
   });
 
 })
