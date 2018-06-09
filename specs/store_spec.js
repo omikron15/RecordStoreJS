@@ -6,11 +6,11 @@ describe("Store", function(){
   let store1;
 
   beforeEach(function(){
-    store11 = new Store("Store Name", "City 1");
+    store1 = new Store("Store Name", "City 1");
   });
 
   it("has a name", function(){
-    assert.strictEqual(store1.name, "Artist 1");
+    assert.strictEqual(store1.name, "Store Name");
   });
 
   it("has a city", function(){
