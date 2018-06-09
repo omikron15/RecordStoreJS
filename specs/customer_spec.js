@@ -6,19 +6,21 @@ describe("Customer", function(){
   let customer1;
 
   beforeEach(function(){
-    customer1 = new Customer("Store Name", "City 1");
+    customer1 = new Customer("Customer 1", 1000.00);
   });
 
   it("has a name", function(){
-    assert.strictEqual(customer1.name, "Artist 1");
+    assert.strictEqual(customer1.name, "Customer 1");
   });
 
-  it("has a city", function(){
-    assert.strictEqual(customer1.city, "City 1");
+  it("has money", function(){
+    assert.strictEqual(customer1.money, 1000.00);
   });
 
-  it("has an inventory that starts empty", function(){
-    assert.strictEqual(customer1.inventory.length, 0);
+  it("has a record collection that starts empty", function(){
+    assert.strictEqual(customer1.recordCollection.length, 0);
   });
+
+
 
 })
