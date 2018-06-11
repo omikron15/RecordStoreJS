@@ -11,6 +11,14 @@ Customer.prototype.buyRecord = function (record) {
   }
 };
 
+Customer.prototype.collectionValue = function () {
+result = 0;
+  this.recordCollection.forEach(function(record){
+    result+= record.price
+  })
+return result;
+};
+
 Customer.prototype.sellRecord = function (recordToSell) {
 
   this.recordCollection.forEach(function(record, index){
