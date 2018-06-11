@@ -13,7 +13,7 @@ describe("Customer", function(){
     customer1 = new Customer("Customer 1", 10.00);
     customer2 = new Customer("Customer 1", 100.00);
     record1 = new Record("Artist 1", "Title 1", "Rock", 10.00);
-    record2 = new Record("Artist 2", "Title 2", "Rock", 20.00);
+    record2 = new Record("Artist 2", "Title 2", "Pop", 20.00);
   });
 
   it("has a name", function(){
@@ -55,6 +55,16 @@ describe("Customer", function(){
     assert.strictEqual(customer2.recordCollection.length, 4);
     assert.strictEqual(customer2.money, 50.00);
     assert.strictEqual(customer2.collectionValue(), 50.00);
+  });
+
+  it("Can see the total value of their collection for a certain genre", function(){
+    customer2.buyRecord(record1);
+    customer2.buyRecord(record1);
+    customer2.buyRecord(record2);
+    customer2.buyRecord(record2);
+    assert.strictEqual(customer2.recordCollection.length, 4);
+    assert.strictEqual(customer2.money, 40.00);
+    assert.strictEqual(customer2.collectionValueForGenre("Pop"), 40.00);
   });
 
 })

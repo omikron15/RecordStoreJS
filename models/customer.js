@@ -19,6 +19,16 @@ result = 0;
 return result;
 };
 
+Customer.prototype.collectionValueForGenre = function (genre) {
+result = 0;
+  this.recordCollection.forEach(function(record){
+    if(record.genre === genre){
+    result+= record.price
+  }
+  })
+return result;
+};
+
 Customer.prototype.sellRecord = function (recordToSell) {
 
   this.recordCollection.forEach(function(record, index){
