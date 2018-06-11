@@ -38,6 +38,17 @@ Customer.prototype.sellRecord = function (recordToSell) {
     }
   }.bind(this))
 
+  Customer.prototype.highestValueRecord = function () {
+    result = this.recordCollection[0];
+
+    this.recordCollection.forEach(function(record){
+      if(record.price > result.price){
+        result = record;
+      }
+    })
+    return result;
+  };
+
 };
 
 module.exports = Customer;

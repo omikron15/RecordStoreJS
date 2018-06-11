@@ -67,4 +67,10 @@ describe("Customer", function(){
     assert.strictEqual(customer2.collectionValueForGenre("Pop"), 40.00);
   });
 
+  it("Can see their highest value record", function(){
+    customer2.buyRecord(record1);
+    customer2.buyRecord(record2);
+    assert.strictEqual(customer2.highestValueRecord(), record2);
+  });
+
 })
